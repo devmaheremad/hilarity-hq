@@ -32,7 +32,7 @@ export default function MyApp(props: MyAppProps) {
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <Navbar />
-        <main className={"paddingContent min-h-90vh max-w-1300px mx-auto"}>
+        <main className={"paddingContent min-h-100vh max-w-1300px mx-auto"}>
           <Component {...pageProps} />
         </main>
       </ThemeProvider>

@@ -14,6 +14,11 @@ a {
   color: #f51997;
   fill: #f51997;
 }
+body,
+html,
+#__next {
+  min-height: 100vh;
+}
 
 /* Framework */
 .pt-95px {
@@ -22,8 +27,8 @@ a {
 .bg-transparent {
   background-color: transparent;
 }
-.min-h-90vh {
-  min-height: 90vh;
+.min-h-100vh {
+  min-height: 100vh;
 }
 .m-h-80px {
   min-height: 80px;

@@ -1,10 +1,9 @@
 import { VideoCardProps } from "@/@types/videoCard.types";
 import { Box, Stack, Typography } from "@mui/material";
-import { NextPage } from "next";
 import Image from "next/image";
 import VerifiedIcon from "@mui/icons-material/Verified";
 
-const VideoCard: NextPage<VideoCardProps> = ({ post }) => {
+const VideoCard = ({ post }: VideoCardProps) => {
   const cutCaption = (captionStr: string): string =>
     captionStr.length >= 250
       ? `${captionStr.substring(0, 250)}...`
@@ -44,7 +43,7 @@ const VideoCard: NextPage<VideoCardProps> = ({ post }) => {
           alignItems={"center"}
           gap={"8px"}
         >
-          {userName} <VerifiedIcon sx={{ color: "#1d9bf0" }} />
+          {userName} <VerifiedIcon fontSize="small" sx={{ color: "#1d9bf0" }} />
         </Typography>
         <Typography variant="subtitle2" color="black" maxWidth={"80%"}>
           {cutCaption(caption)}
