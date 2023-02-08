@@ -10,7 +10,12 @@ const Home: NextPage<HomeProps> = ({ videos }) => {
       mx={"0 auto"}
       maxWidth={"1300px"}
     >
-      <Stack direction={"row"} position={"relative"} height={"65vh"}>
+      <Stack
+        direction={"row"}
+        position={"relative"}
+        height={"65vh"}
+        spacing={{ xs: 4, sx: 0 }}
+      >
         <Sidebar />
         <Stack direction={"column"} spacing={2} flexGrow={1}>
           {videos.length ? (

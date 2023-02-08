@@ -1,6 +1,6 @@
 import { Open_Sans } from "@next/font/google";
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
-import { red } from "@mui/material/colors";
+import { red, grey } from "@mui/material/colors";
 
 export const openSans = Open_Sans({
   weight: ["400", "500", "700"],
@@ -15,7 +15,7 @@ let theme = createTheme({
       main: "#f51997",
     },
     secondary: {
-      main: "#19857b",
+      main: grey[800],
     },
     error: {
       main: red.A400,
