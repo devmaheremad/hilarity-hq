@@ -16,7 +16,6 @@ const VideoCard = ({ post }: VideoCardProps) => {
 	const videoRef = useRef<HTMLVideoElement>(null);
 
 	const playVideoHandler = (): void => {
-		const video = videoRef.current;
 		if (playing) {
 			videoRef.current?.pause();
 			setPlaying((prev) => !prev);
@@ -126,14 +125,14 @@ const VideoCard = ({ post }: VideoCardProps) => {
 									onClick={mutedVideoHandler}
 									aria-label="VolumeUp video"
 								>
-									<VolumeUpIcon color="secondary" />
+									<VolumeOffIcon color="secondary" />
 								</IconButton>
 							) : (
 								<IconButton
 									onClick={mutedVideoHandler}
 									aria-label="VolumeOff video"
 								>
-									<VolumeOffIcon color="secondary" />
+									<VolumeUpIcon color="secondary" />
 								</IconButton>
 							)}
 						</Box>
