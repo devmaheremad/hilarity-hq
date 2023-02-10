@@ -1,29 +1,30 @@
-// import axios from 'axios';
+import { DecodedTypes } from "@/@types/decoded.types";
+import { UserPostedToSanity } from "@/@types/userSanity";
+import { addUser } from "@/store/features/authUser";
+import { isLogin } from "@/store/features/loginChecker";
+import store from "@/store/store";
+import jwt_decode from "jwt-decode";
 
-export const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+export const createOrGetUser = async (response: any) => {
+	const decoded: DecodedTypes = jwt_decode(response.credential);
 
-export const createOrGetUser = async (response: any, addUser: any) => {
-  var base64Url = response.credential.split(".")[1];
-  var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
-  var jsonPayload = decodeURIComponent(
-    atob(base64)
-      .split("")
-      .map(function (c) {
-        return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
-      })
-      .join("")
-  );
+	const { sub, name, picture } = decoded;
 
-  const { name, picture, sub } = JSON.parse(jsonPayload);
+	const user: UserPostedToSanity = {
+		_id: sub,
+		_type: "user",
+		userName: name,
+		image: picture,
+	};
 
-  const user = {
-    _id: sub,
-    _type: "user",
-    userName: name,
-    image: picture,
-  };
+	store.dispatch(addUser(user));
+	store.dispatch(isLogin(true));
 
-  addUser(user);
-
-  // await axios.post(`${BASE_URL}/api/auth`, user);
+	await fetch("http://localhost:3000/api/auth", {
+		method: "POST",
+		body: JSON.stringify(user),
+		headers: {
+			"Content-Type": "application/json",
+		},
+	});
 };
