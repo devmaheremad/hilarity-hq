@@ -7,9 +7,16 @@ import Link from "../Link";
 import { googleLogout } from "@react-oauth/google";
 import { setLoginStatus } from "@/store/features/loginChecker";
 import { addUser } from "@/store/features/authUser";
+import { useRouter } from "next/router";
 const WhenLogin = () => {
 	const user = useAppSelector((state) => state.userProfile.authUser);
 	const dispatch = useAppDispatch();
+	const router = useRouter();
+
+	const pushToHome = (): void => {
+		router.push("/");
+	};
+
 	return (
 		<>
 			<Link href={"/upload"} display={"flex"} alignItems={"center"}>
@@ -44,6 +51,7 @@ const WhenLogin = () => {
 					googleLogout();
 					dispatch(setLoginStatus(false));
 					dispatch(addUser(null));
+					pushToHome();
 				}}
 			>
 				<LogoutIcon sx={{ color: "#f51997" }} />
