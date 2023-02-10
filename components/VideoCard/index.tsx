@@ -7,7 +7,7 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
 import VolumeOffIcon from "@mui/icons-material/VolumeOff";
 import VolumeUpIcon from "@mui/icons-material/VolumeUp";
-import Link from "./Link";
+import Link from "../Link";
 
 const VideoCard = ({ post }: VideoCardProps) => {
 	const [showControls, setShowControls] = useState<boolean>(false);

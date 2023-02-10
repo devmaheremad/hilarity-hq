@@ -1,5 +1,8 @@
 import { AppBar, Grid, Toolbar } from "@mui/material";
-import { LogoLink, MenuWithUpload, Search } from "./";
+import React from "react";
+import LogoLink from "./LogoLink";
+import MenuWithUpload from "./MenuWithUpload";
+import Search from "./Search";
 
 const Navbar = () => {
 	return (

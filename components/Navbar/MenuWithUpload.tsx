@@ -2,7 +2,7 @@ import { useAppSelector } from "@/store/hook";
 import { createOrGetUser } from "@/utils";
 import { Grid, Stack } from "@mui/material";
 import { GoogleLogin } from "@react-oauth/google";
-import { WhenLogin } from "./";
+import { WhenLogin } from "..";
 
 const MenuWithUpload = () => {
 	const isLoggedIn = useAppSelector((state) => state.loginChecker.isLoggedIn);
