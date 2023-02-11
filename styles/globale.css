@@ -1,101 +1,102 @@
 /* Genral rules */
 a {
-  text-decoration: none !important;
+	text-decoration: none !important;
 }
 .MuiToggleButton-root.Mui-selected {
-  background-color: transparent !important;
-  border-left: 1px solid #f51997 !important;
-  border: 1px solid #f51997 !important;
+	background-color: transparent !important;
+	border-left: 1px solid #f51997 !important;
+	border: 1px solid #f51997 !important;
 }
 .MuiToggleButton-root.Mui-selected h6,
 .MuiToggleButton-root.Mui-selected path,
 .MuiToggleButton-root.Mui-selected svg {
-  transition: all 0.15s ease-in-out;
-  color: #f51997;
-  fill: #f51997;
+	transition: all 0.15s ease-in-out;
+	color: #f51997;
+	fill: #f51997;
 }
 body,
 html,
 #__next {
-  min-height: 100vh;
+	min-height: 100vh;
+	background-color: #f8f8f8;
 }
 
 /* Framework */
 .pt-95px {
-  padding-top: 95px;
+	padding-top: 95px;
 }
 .bg-transparent {
-  background-color: transparent;
+	background-color: transparent;
 }
 .min-h-100vh {
-  min-height: 100vh;
+	min-height: 100vh;
 }
 .m-h-80px {
-  min-height: 80px;
+	min-height: 80px;
 }
 .justify-content-center {
-  justify-content: center;
+	justify-content: center;
 }
 .contentCentered {
-  max-width: 1300px;
-  margin: 0 auto;
+	max-width: 1300px;
+	margin: 0 auto;
 }
 .w-100 {
-  width: 100%;
+	width: 100%;
 }
 .p-0 {
-  padding: 0;
+	padding: 0;
 }
 .flexWrap {
-  flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 /* For Input */
 
 .inputBase fieldset {
-  display: none;
-  border: none !important;
+	display: none;
+	border: none !important;
 }
 .inputBase input::placeholder {
-  color: #000 !important;
-  opacity: 1;
+	color: #000 !important;
+	opacity: 1;
 }
 .inputBase input {
-  /* border: 1px solid gray; */
-  border-radius: 25px !important;
-  height: 28px;
-  padding: 12px 15px;
-  background-color: #b8b8b866;
+	/* border: 1px solid gray; */
+	border-radius: 25px !important;
+	height: 28px;
+	padding: 12px 15px;
+	background-color: #b8b8b866;
 }
 .inputBase label:focus {
-  background-color: #fff;
+	background-color: #fff;
 }
 .cursor-pointer {
-  cursor: pointer;
+	cursor: pointer;
 }
 .paddingContent {
-  padding-top: 255px;
+	padding-top: 255px;
 }
 @media (min-width: 870px) {
-  .paddingContent {
-    padding-top: 234px;
-  }
+	.paddingContent {
+		padding-top: 234px;
+	}
 }
 @media (min-width: 900px) {
-  .paddingContent {
-    padding-top: 120px;
-  }
+	.paddingContent {
+		padding-top: 120px;
+	}
 }
 .max-w-1300px {
-  max-width: 1300px;
+	max-width: 1300px;
 }
 .mx-auto {
-  margin-left: auto;
-  margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 .rounded-circle {
-  border-radius: 30px;
+	border-radius: 30px;
 }
 .border-around {
-  border: 2px solid #8080808a;
-  padding: 2px;
+	border: 2px solid #8080808a;
+	padding: 2px;
 }

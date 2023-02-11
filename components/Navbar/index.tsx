@@ -10,7 +10,7 @@ const Navbar = () => {
 			position="fixed"
 			component={"nav"}
 			className={"bg-transparent justify-content-center"}
-			sx={{ height: { xs: "auto" }, py: "15px", bgcolor: "transparent" }}
+			sx={{ height: { xs: "auto" }, py: "15px", bgcolor: "#fff" }}
 		>
 			<Toolbar
 				className="contentCentered w-100 flexWrap max-w-1300px mx-auto"

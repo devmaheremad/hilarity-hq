@@ -1,7 +1,5 @@
-import { Sidebar } from "@/components";
 import { Box, Stack } from "@mui/material";
 import Head from "next/head";
-import React from "react";
 
 const Upload = () => {
 	return (
@@ -24,8 +22,12 @@ const Upload = () => {
 					height={"65vh"}
 					spacing={{ xs: 4, sx: 0 }}
 				>
-					<Sidebar />
-					<h1>test</h1>
+					<Box>
+						<h1>upload</h1>
+					</Box>
+					<Box>
+						<h1>Form</h1>
+					</Box>
 				</Stack>
 			</Box>
 		</>
