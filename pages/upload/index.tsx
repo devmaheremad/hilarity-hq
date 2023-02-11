@@ -1,4 +1,4 @@
-import { Box, Stack } from "@mui/material";
+import { Box } from "@mui/material";
 import Head from "next/head";
 
 const Upload = () => {
@@ -15,20 +15,10 @@ const Upload = () => {
 				px={{ xs: 1, sm: 2, md: 3, lg: 4, xl: 5 }}
 				mx={"0 auto"}
 				maxWidth={"1300px"}
+				className={"paddingContent min-h-100vh"}
 			>
-				<Stack
-					direction={"row"}
-					position={"relative"}
-					height={"65vh"}
-					spacing={{ xs: 4, sx: 0 }}
-				>
-					<Box>
-						<h1>upload</h1>
-					</Box>
-					<Box>
-						<h1>Form</h1>
-					</Box>
-				</Stack>
+				<Box>upload </Box>
+				<Box>Form </Box>
 			</Box>
 		</>
 	);

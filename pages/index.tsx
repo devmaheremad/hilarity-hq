@@ -19,6 +19,7 @@ const Home = ({ videos }: HomeProps) => {
 				px={{ xs: 1, sm: 2, md: 3, lg: 4, xl: 5 }}
 				mx={"0 auto"}
 				maxWidth={"1300px"}
+				className={"paddingContent min-h-100vh"}
 			>
 				<Stack
 					direction={"row"}

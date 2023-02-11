@@ -8,7 +8,11 @@ const MenuWithUpload = () => {
 	const isLoggedIn = useAppSelector((state) => state.loginChecker.isLoggedIn);
 	return (
 		<Grid item xs={5}>
-			<Stack direction={"row"} spacing={3} justifyContent={"flex-end"}>
+			<Stack
+				direction={"row"}
+				spacing={3}
+				justifyContent={{ xs: "center", md: "flex-end" }}
+			>
 				{isLoggedIn ? (
 					<WhenLogin />
 				) : (
