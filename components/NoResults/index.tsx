@@ -1,5 +1,5 @@
 const NoResults = () => {
-  return <div>NoResults</div>;
+	return <div>NoResults</div>;
 };
 
 export default NoResults;

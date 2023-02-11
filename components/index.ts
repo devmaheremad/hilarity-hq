@@ -6,3 +6,6 @@ export { default as LogoLink } from "./Navbar/LogoLink";
 export { default as Search } from "./Navbar/Search";
 export { default as MenuWithUpload } from "./Navbar/MenuWithUpload";
 export { default as WhenLogin } from "./Navbar/WhenLogin";
+export { default as VideoUploader } from "./VideoUploader";
+export { default as HeadingWithSub } from "./HeadingWithSub";
+export { default as VideoToUploadCondtion } from "./VideoToUploadCondtion";
