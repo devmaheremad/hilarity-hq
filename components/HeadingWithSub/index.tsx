@@ -10,10 +10,12 @@ const HeadingWithSub = ({
 	subVariant,
 	subColor,
 	subFontWeight,
+	textAlign,
 }: HeadingWithSubProps) => {
 	return (
 		<>
 			<Typography
+				textAlign={textAlign ? textAlign : "start"}
 				variant={`${headingVariant}`}
 				color={`${headingColor}`}
 				fontWeight={headingFontWeight}
@@ -21,6 +23,7 @@ const HeadingWithSub = ({
 				{headingText}
 			</Typography>
 			<Typography
+				textAlign={textAlign ? textAlign : "start"}
 				mt={"2px"}
 				variant={`${subVariant}`}
 				color={`${subColor}`}

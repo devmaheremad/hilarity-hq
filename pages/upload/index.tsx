@@ -1,4 +1,4 @@
-import { VideoUploader } from "@/components";
+import { VideoUploader, VideoUploaderForm } from "@/components";
 import { Box, Stack } from "@mui/material";
 import Head from "next/head";
 
@@ -29,7 +29,7 @@ const Upload = () => {
 					spacing={3}
 				>
 					<VideoUploader />
-					<Box flexGrow={1}>Form </Box>
+					<VideoUploaderForm />
 				</Stack>
 			</Box>
 		</>

@@ -9,3 +9,5 @@ export { default as WhenLogin } from "./Navbar/WhenLogin";
 export { default as VideoUploader } from "./VideoUploader";
 export { default as HeadingWithSub } from "./HeadingWithSub";
 export { default as VideoToUploadCondtion } from "./VideoToUploadCondtion";
+export { default as VideoUploaderForm } from "./VideoUploaderForm";
+export { default as WaitingToUpload } from "./WaitingToUpload";

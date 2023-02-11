@@ -5,6 +5,7 @@ import {
 } from "@reduxjs/toolkit";
 import {
 	loginCheckerReducer,
+	uploaderSliceReducer,
 	userProfileReducer,
 } from "./features/forReducersExport";
 import { persistStore, persistReducer } from "redux-persist";
@@ -13,6 +14,7 @@ import storage from "redux-persist/lib/storage";
 const rootReducer = combineReducers({
 	userProfile: userProfileReducer,
 	loginChecker: loginCheckerReducer,
+	uploader: uploaderSliceReducer,
 });
 
 const persistConfig = {

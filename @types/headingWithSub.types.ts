@@ -35,4 +35,5 @@ export type HeadingWithSubProps = {
 	subText: string;
 	subColor?: string;
 	subFontWeight?: number;
+	textAlign?: "start" | "center";
 };

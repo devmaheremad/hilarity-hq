@@ -2,17 +2,16 @@ import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import { useState } from "react";
 import { client } from "@/utils/client";
 import { SanityAssetDocument } from "@sanity/client";
-import Image from "next/image";
-import { LoaderVideo } from "@/public/assets/imgs";
-import { Box, Typography, Stack, Button, IconButton } from "@mui/material";
+import { Box, Typography, Stack, IconButton } from "@mui/material";
 import HeadingWithSub from "../HeadingWithSub";
 import VideoToUploadCondtion from "../VideoToUploadCondtion";
+import WaitingToUpload from "../WaitingToUpload";
 
 const VideoUploader = () => {
 	const [isLoading, setIsLoading] = useState<boolean>(false);
-	const [videoAsset, setVideoAsset] = useState<
-		SanityAssetDocument | undefined
-	>();
+	const [videoAsset, setVideoAsset] = useState<SanityAssetDocument | null>(
+		null
+	);
 	const [wrongType, setWrongType] = useState<boolean>(false);
 
 	const uploadVideo = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -38,7 +37,11 @@ const VideoUploader = () => {
 	};
 
 	return (
-		<Box flexShrink={0} width={"300px"}>
+		<Box
+			flexShrink={0}
+			width={{ xs: "226px", sm: "320px", md: "380px" }}
+			mx={"auto"}
+		>
 			<HeadingWithSub
 				headingVariant={"h5"}
 				headingText={"Upload a video"}
@@ -47,6 +50,7 @@ const VideoUploader = () => {
 				subVariant={"body2"}
 				subText={"Post a video to your account"}
 				subColor={"#b5b3b3"}
+				textAlign={"center"}
 			/>
 			<Stack
 				position={"relative"}
@@ -70,7 +74,7 @@ const VideoUploader = () => {
 				}}
 			>
 				{isLoading ? (
-					<Image src={LoaderVideo} alt={`${LoaderVideo}`} />
+					<WaitingToUpload />
 				) : videoAsset ? (
 					<video src={videoAsset.url} width={"95%"} loop controls></video>
 				) : (

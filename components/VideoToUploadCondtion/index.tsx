@@ -18,7 +18,7 @@ const VideoToUploadCondtion = () => {
 			<Typography variant="caption" fontWeight={500} color="#808080a6">
 				Less than 2 GB
 			</Typography>
-			<Button variant="contained" sx={{ mt: 3 }}>
+			<Button variant="contained" sx={{ mt: 3, textTransform: "none" }}>
 				Select a video
 			</Button>
 		</>
