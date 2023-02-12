@@ -36,7 +36,11 @@ const WhenLogin = () => {
 				</Button>
 			</Link>
 			{user?.image && (
-				<Link href={"/"} display={"flex"} alignItems={"center"}>
+				<Link
+					href={`/profile/${user._id}`}
+					display={"flex"}
+					alignItems={"center"}
+				>
 					<Image
 						src={`${user?.image}`}
 						alt={`${user?.userName}`}

@@ -78,7 +78,7 @@ const VideoCard = ({ post }: VideoCardProps) => {
 				<Link
 					onMouseEnter={() => setShowControls(true)}
 					onMouseLeave={() => setShowControls(false)}
-					href={"/"}
+					href={`/details/${post._id}`}
 					height={"92%"}
 					display={"flex"}
 					alignItems={"center"}
@@ -97,6 +97,7 @@ const VideoCard = ({ post }: VideoCardProps) => {
 					></video>
 					{showControls && (
 						<Box
+							zIndex={2}
 							display={"flex"}
 							justifyContent={"space-between"}
 							position={"absolute"}

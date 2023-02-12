@@ -29,6 +29,8 @@ const VideoUploaderForm = () => {
 		(state) => state.loginCheckerWithUserData.userProfile.authUser
 	);
 
+	console.log(videoAsset);
+
 	const dispatch = useAppDispatch();
 
 	const handleCategoryChange = (event: SelectChangeEvent) => {
