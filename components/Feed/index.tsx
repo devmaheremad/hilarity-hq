@@ -1,14 +1,14 @@
 import { FeedProps } from "@/@types/feed.types";
-import { VedioTypes } from "@/@types/video.types";
+import { VideoTypes } from "@/@types/video.types";
 import { Stack } from "@mui/material";
 import NoResults from "../NoResults";
 import VideoCard from "../VideoCard";
 
 const Feed = ({ videos }: FeedProps) => {
 	return (
-		<Stack direction={"column"} spacing={2} flexGrow={1}>
+		<Stack direction={"column"} flexGrow={1}>
 			{videos.length ? (
-				videos.map((video: VedioTypes) => {
+				videos.map((video: VideoTypes) => {
 					return <VideoCard post={video} key={video._id} />;
 				})
 			) : (

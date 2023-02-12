@@ -1,5 +1,5 @@
-import { VedioTypes } from "./video.types";
+import { VideoTypes } from "./video.types";
 
 export type VideoCardProps = {
-  post: VedioTypes;
+	post: VideoTypes;
 };

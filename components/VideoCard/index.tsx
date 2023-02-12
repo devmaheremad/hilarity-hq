@@ -55,7 +55,12 @@ const VideoCard = ({ post }: VideoCardProps) => {
 			gap={2}
 			mb={12}
 		>
-			<Link href={`/profile/${user?._id}`}>
+			<Link
+				href={`/profile/${user?._id}`}
+				display={"inline-block"}
+				width={55}
+				height={55}
+			>
 				<Image
 					src={post?.postedBy.image}
 					alt={post?.caption}
@@ -67,7 +72,7 @@ const VideoCard = ({ post }: VideoCardProps) => {
 				/>
 			</Link>
 			<Box flexGrow={1}>
-				<Link href={`/profile/${user?._id}`}>
+				<Link href={`/profile/${user?._id}`} display={"inline-block"}>
 					<Typography
 						variant="subtitle1"
 						color="#000"

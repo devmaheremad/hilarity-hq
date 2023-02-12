@@ -1,4 +1,4 @@
-export type VedioTypes = {
+export type VideoTypes = {
 	caption: string;
 	video: {
 		asset: {
@@ -29,5 +29,5 @@ export type VedioTypes = {
 	userId: string;
 };
 export type HomeProps = {
-	videos: VedioTypes[];
+	videos: VideoTypes[];
 };

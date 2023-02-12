@@ -1,8 +1,7 @@
-import { HomeProps, VedioTypes } from "@/@types/video.types";
+import { HomeProps, VideoTypes } from "@/@types/video.types";
 import Feed from "@/components/Feed";
 import { Box, Stack } from "@mui/material";
 import { GetServerSideProps } from "next";
-import Head from "next/head";
 import { Headhtml, Sidebar } from "../components";
 
 const Home = ({ videos }: HomeProps) => {
@@ -36,7 +35,7 @@ const Home = ({ videos }: HomeProps) => {
 
 export const getServerSideProps: GetServerSideProps = async () => {
 	const response = await fetch("http://localhost:3000/api/post");
-	const data: VedioTypes[] = await response.json();
+	const data: VideoTypes[] = await response.json();
 
 	return {
 		props: {

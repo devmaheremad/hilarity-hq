@@ -1,5 +1,5 @@
-import { VedioTypes } from "./video.types";
+import { VideoTypes } from "./video.types";
 
 export type FeedProps = {
-	videos: VedioTypes[];
+	videos: VideoTypes[];
 };
