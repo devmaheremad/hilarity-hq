@@ -1,5 +1,6 @@
 import { setVideoAsset } from "@/store/features/uploader";
 import { useAppDispatch, useAppSelector } from "@/store/hook";
+import { BASE_URL } from "@/utils";
 import { popularTopics } from "@/utils/constants";
 import {
 	Button,
@@ -55,8 +56,7 @@ const VideoUploaderForm = () => {
 				},
 				topic: cateogry,
 			};
-
-			await fetch("http://localhost:3000/api/post", {
+			await fetch(`${BASE_URL}/api/post`, {
 				method: "POST",
 				body: JSON.stringify(documentPost),
 				headers: {

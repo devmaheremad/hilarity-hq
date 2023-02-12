@@ -4,6 +4,7 @@ import { addUser } from "@/store/features/authUser";
 import { isLogin } from "@/store/features/loginChecker";
 import store from "@/store/store";
 import jwt_decode from "jwt-decode";
+export const BASE_URL = process.env.NEXT_PUBLIC_GOOGLE_API_TOKEN;
 
 export const createOrGetUser = async (response: any) => {
 	const decoded: DecodedTypes = jwt_decode(response.credential);
@@ -20,7 +21,7 @@ export const createOrGetUser = async (response: any) => {
 	store.dispatch(addUser(user));
 	store.dispatch(isLogin(true));
 
-	await fetch("http://localhost:3000/api/auth", {
+	await fetch(`${BASE_URL}/api/auth`, {
 		method: "POST",
 		body: JSON.stringify(user),
 		headers: {
