@@ -4,7 +4,7 @@ import { addUser } from "@/store/features/authUser";
 import { isLogin } from "@/store/features/loginChecker";
 import store from "@/store/store";
 import jwt_decode from "jwt-decode";
-export const BASE_URL = process.env.NEXT_PUBLIC_GOOGLE_API_TOKEN;
+export const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
 export const createOrGetUser = async (response: any) => {
 	const decoded: DecodedTypes = jwt_decode(response.credential);
