@@ -1,7 +1,7 @@
 import { Box, Stack } from "@mui/material";
 import HeadingWithSub from "../HeadingWithSub";
 import WaitingToUpload from "../WaitingToUpload";
-import { useAppDispatch, useAppSelector } from "@/store/hook";
+import { useAppSelector } from "@/store/hook";
 import { ShowVideoWithDeleteOption, VideoInputFile, WrongTypeVideo } from "..";
 const VideoUploader = () => {
 	const isLoading = useAppSelector((state) => state.uploader.isLoading);

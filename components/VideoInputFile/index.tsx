@@ -11,13 +11,18 @@ import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import { VideoToUploadCondtion } from "..";
 
 const VideoInputFile = () => {
+	const MAX_FILE_SIZE = 15000000; // 15 MB in bytes
+
 	const dispatch = useAppDispatch();
 
 	const uploadVideo = async (e: React.ChangeEvent<HTMLInputElement>) => {
 		if (e.target.files !== null) {
 			const selectedFile = e.target.files[0];
 			const fileTypes = ["video/mp4", "video/webm", "video/ogg"];
-			if (fileTypes.includes(selectedFile.type)) {
+			if (
+				fileTypes.includes(selectedFile.type) &&
+				selectedFile.size <= MAX_FILE_SIZE
+			) {
 				dispatch(setIsLoading(true));
 				await client.assets
 					.upload("file", selectedFile, {

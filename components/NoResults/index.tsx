@@ -44,8 +44,8 @@ const NoResults = () => {
 				<u>
 					<b>
 						We believe that everyone has something valuable to contribute, and
-						your contribution will be greatly appreciated. So go ahead and
-						upload a video today!
+						your contribution will be greatly appreciated. So go ahead, create
+						your account, and upload a video today!
 					</b>
 				</u>
 			</Typography>

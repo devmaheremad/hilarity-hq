@@ -10,13 +10,10 @@ const VideoToUploadCondtion = () => {
 				MP4 or WebM or ogg
 			</Typography>
 			<Typography variant="caption" fontWeight={500} color="#808080a6">
-				720*1280 or higher
+				Approximately under 3 minutes in length
 			</Typography>
 			<Typography variant="caption" fontWeight={500} color="#808080a6">
-				Up to 20 minutes
-			</Typography>
-			<Typography variant="caption" fontWeight={500} color="#808080a6">
-				Less than 2 GB
+				Less than 15 MB
 			</Typography>
 			<Button variant="contained" sx={{ mt: 3, textTransform: "none" }}>
 				Select a video

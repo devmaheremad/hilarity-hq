@@ -76,6 +76,7 @@ const VideoUploaderForm = () => {
 			pt={{ xs: "20px", md: "130px" }}
 		>
 			<TextField
+				required
 				id="caption"
 				label="Caption"
 				variant="outlined"
@@ -88,6 +89,7 @@ const VideoUploaderForm = () => {
 			<FormControl sx={{ mb: 4, minWidth: 120 }} className={"labelBgWhite"}>
 				<InputLabel id="category-selected">cateogry</InputLabel>
 				<Select
+					required
 					labelId="category-selected"
 					id="categort-select"
 					value={cateogry}

@@ -16,7 +16,13 @@ const ShowVideoWithDeleteOption = () => {
 			<IconButton aria-label="delete this video" onClick={deleteTheVideoAsset}>
 				<DeleteIcon />
 			</IconButton>
-			<video src={videoAsset?.url} width={"95%"} loop controls></video>
+			<video
+				src={videoAsset?.url}
+				width={"95%"}
+				height={"80%"}
+				loop
+				controls
+			></video>
 		</>
 	);
 };

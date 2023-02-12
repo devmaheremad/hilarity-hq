@@ -9,8 +9,8 @@ const WrongTypeVideo = () => {
 			px={2}
 			textAlign={"center"}
 		>
-			Please select a video file, and this video must be in one of these formats
-			( MP4, WebM, or ogg )
+			Please select a video file, make sure this video must be in one of these
+			formats ( MP4, WebM, or ogg ), and less than 15 MB
 		</Typography>
 	);
 };
