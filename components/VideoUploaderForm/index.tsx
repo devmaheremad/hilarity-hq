@@ -16,23 +16,24 @@ import { useState } from "react";
 const VideoUploaderForm = () => {
 	const router = useRouter();
 
-	const videoAsset = useAppSelector((state) => state.uploader.videoAsset);
-	const authUser = useAppSelector((state) => state.userProfile.authUser);
-
 	const [cateogry, setCateogry] = useState<string>("");
 	const [caption, setCaption] = useState<string>("");
 	const [savingPost, setSavingPost] = useState<boolean>(false);
+
+	const postBtnIsDisabled = useAppSelector(
+		(state) => state.uploader.postBtnIsDisabled
+	);
+	const videoAsset = useAppSelector((state) => state.uploader.videoAsset);
+	const authUser = useAppSelector(
+		(state) => state.loginCheckerWithUserData.userProfile.authUser
+	);
 
 	const handleCategoryChange = (event: SelectChangeEvent) => {
 		setCateogry(event.target.value);
 	};
 
 	const handleSubmitPost = async () => {
-		console.log({ caption, cateogry, videoAsset });
-
 		if (videoAsset?._id && cateogry && caption) {
-			console.log("after if");
-
 			setSavingPost(true);
 			const documentPost = {
 				_type: "post",
@@ -106,6 +107,7 @@ const VideoUploaderForm = () => {
 					Discard
 				</Button>
 				<Button
+					disabled={postBtnIsDisabled}
 					onClick={handleSubmitPost}
 					fullWidth
 					variant="contained"

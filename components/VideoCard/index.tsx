@@ -37,18 +37,11 @@ const VideoCard = ({ post }: VideoCardProps) => {
 		}
 	};
 
-	const cutCaption = (captionStr: string): string =>
-		captionStr.length >= 250
+	const cutCaption = (captionStr: string): string => {
+		return captionStr.length >= 250
 			? `${captionStr.substring(0, 250)}...`
 			: captionStr;
-
-	const {
-		caption,
-		postedBy: { image, userName },
-		video: {
-			asset: { url },
-		},
-	} = post;
+	};
 
 	return (
 		<Stack
@@ -57,10 +50,11 @@ const VideoCard = ({ post }: VideoCardProps) => {
 			display={"flex"}
 			flexDirection={{ xs: "column", sm: "row" }}
 			gap={2}
+			mb={5}
 		>
 			<Image
-				src={image}
-				alt={caption}
+				src={post?.postedBy.image}
+				alt={post?.caption}
 				width={55}
 				height={55}
 				placeholder={"blur"}
@@ -76,10 +70,11 @@ const VideoCard = ({ post }: VideoCardProps) => {
 					alignItems={"center"}
 					gap={"8px"}
 				>
-					{userName} <VerifiedIcon fontSize="small" sx={{ color: "#1d9bf0" }} />
+					{post?.postedBy.userName}{" "}
+					<VerifiedIcon fontSize="small" sx={{ color: "#1d9bf0" }} />
 				</Typography>
 				<Typography variant="subtitle2" color="#958989" maxWidth={"80%"}>
-					{cutCaption(caption)}
+					{cutCaption(post?.caption)}
 				</Typography>
 				<Link
 					onMouseEnter={() => setShowControls(true)}
@@ -97,7 +92,7 @@ const VideoCard = ({ post }: VideoCardProps) => {
 					<video
 						ref={videoRef}
 						loop
-						src={url}
+						src={post?.video?.asset?.url}
 						width={"100%"}
 						height={"80%"}
 					></video>

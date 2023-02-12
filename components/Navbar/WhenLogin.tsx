@@ -9,7 +9,9 @@ import { setLoginStatus } from "@/store/features/loginChecker";
 import { addUser } from "@/store/features/authUser";
 import { useRouter } from "next/router";
 const WhenLogin = () => {
-	const user = useAppSelector((state) => state.userProfile.authUser);
+	const user = useAppSelector(
+		(state) => state.loginCheckerWithUserData.userProfile.authUser
+	);
 	const dispatch = useAppDispatch();
 	const router = useRouter();
 

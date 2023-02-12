@@ -11,21 +11,26 @@ import {
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
-const rootReducer = combineReducers({
-	userProfile: userProfileReducer,
-	loginChecker: loginCheckerReducer,
-	uploader: uploaderSliceReducer,
-});
-
-const persistConfig = {
+const persistConfigLoginCheckerWithUserData = {
 	key: "loginCheckerWithUserData",
 	storage,
 };
 
-const persistedReducer = persistReducer(persistConfig, rootReducer);
+const rootReducer = combineReducers({
+	userProfile: userProfileReducer,
+	loginChecker: loginCheckerReducer,
+});
+
+const persistedLoginCheckerWithUserDataReducer = persistReducer(
+	persistConfigLoginCheckerWithUserData,
+	rootReducer
+);
 
 const store = configureStore({
-	reducer: persistedReducer,
+	reducer: combineReducers({
+		loginCheckerWithUserData: persistedLoginCheckerWithUserDataReducer,
+		uploader: uploaderSliceReducer,
+	}),
 	middleware: getDefaultMiddleware({
 		serializableCheck: false,
 	}),

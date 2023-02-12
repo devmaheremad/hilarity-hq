@@ -5,7 +5,9 @@ import { GoogleLogin } from "@react-oauth/google";
 import { WhenLogin } from "..";
 
 const MenuWithUpload = () => {
-	const isLoggedIn = useAppSelector((state) => state.loginChecker.isLoggedIn);
+	const isLoggedIn = useAppSelector(
+		(state) => state.loginCheckerWithUserData.loginChecker.isLoggedIn
+	);
 	return (
 		<Grid item xs={5}>
 			<Stack

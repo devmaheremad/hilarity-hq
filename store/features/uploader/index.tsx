@@ -5,12 +5,14 @@ type UploaderInitialState = {
 	isLoading: boolean;
 	videoAsset: SanityAssetDocument | null;
 	wrongType: boolean;
+	postBtnIsDisabled: boolean;
 };
 
 const initialState: UploaderInitialState = {
 	isLoading: false,
 	videoAsset: null,
 	wrongType: false,
+	postBtnIsDisabled: true,
 };
 
 const uploaderSlice = createSlice({
@@ -29,9 +31,16 @@ const uploaderSlice = createSlice({
 		setWrongType: (state, action: PayloadAction<boolean>) => {
 			state.wrongType = action.payload;
 		},
+		setPostBtnIsDisabled: (state, action: PayloadAction<boolean>) => {
+			state.postBtnIsDisabled = action.payload;
+		},
 	},
 });
 
 export default uploaderSlice.reducer;
-export const { setIsLoading, setVideoAsset, setWrongType } =
-	uploaderSlice.actions;
+export const {
+	setIsLoading,
+	setVideoAsset,
+	setWrongType,
+	setPostBtnIsDisabled,
+} = uploaderSlice.actions;

@@ -11,3 +11,5 @@ export { default as HeadingWithSub } from "./HeadingWithSub";
 export { default as VideoToUploadCondtion } from "./VideoToUploadCondtion";
 export { default as VideoUploaderForm } from "./VideoUploaderForm";
 export { default as WaitingToUpload } from "./WaitingToUpload";
+export { default as VideoInputFile } from "./VideoInputFile";
+export { default as WrongTypeVideo } from "./WrongTypeVideo";
