@@ -14,3 +14,4 @@ export { default as WaitingToUpload } from "./WaitingToUpload";
 export { default as VideoInputFile } from "./VideoInputFile";
 export { default as WrongTypeVideo } from "./WrongTypeVideo";
 export { default as ShowVideoWithDeleteOption } from "./ShowVideoWithDeleteOption";
+export { default as Headhtml } from "./HeadHTML";

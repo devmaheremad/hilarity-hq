@@ -3,18 +3,17 @@ import Feed from "@/components/Feed";
 import { Box, Stack } from "@mui/material";
 import { GetServerSideProps } from "next";
 import Head from "next/head";
-import { Sidebar } from "../components";
+import { Headhtml, Sidebar } from "../components";
 
 const Home = ({ videos }: HomeProps) => {
 	return (
 		<>
-			<Head>
-				<title>Hilarity HQ Home Page</title>
-				<meta
-					name="description"
-					content="Discover endless laughs at Hilarity HQ! Our website features a collection of the funniest jokes, memes, videos, and more. Join our community for a daily dose of humor."
-				/>
-			</Head>
+			<Headhtml
+				title={"Hilarity HQ Home Page"}
+				metaDesc={
+					"Discover endless laughs at Hilarity HQ! Our website features a collection of the funniest jokes, memes, videos, and more. Join our community for a daily dose of humor."
+				}
+			/>
 			<Box
 				px={{ xs: 1, sm: 2, md: 3, lg: 4, xl: 5 }}
 				mx={"0 auto"}
