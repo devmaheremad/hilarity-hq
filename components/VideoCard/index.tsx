@@ -45,12 +45,11 @@ const VideoCard = ({ post }: VideoCardProps) => {
 
 	return (
 		<Stack
-			height={{ xs: "300px", md: "500px", lg: "700px" }}
 			width={"100%"}
 			display={"flex"}
 			flexDirection={{ xs: "column", sm: "row" }}
 			gap={2}
-			mb={5}
+			mb={12}
 		>
 			<Image
 				src={post?.postedBy.image}
@@ -70,7 +69,7 @@ const VideoCard = ({ post }: VideoCardProps) => {
 					alignItems={"center"}
 					gap={"8px"}
 				>
-					{post?.postedBy.userName}{" "}
+					{post?.postedBy.userName}
 					<VerifiedIcon fontSize="small" sx={{ color: "#1d9bf0" }} />
 				</Typography>
 				<Typography variant="subtitle2" color="#958989" maxWidth={"80%"}>
@@ -80,7 +79,7 @@ const VideoCard = ({ post }: VideoCardProps) => {
 					onMouseEnter={() => setShowControls(true)}
 					onMouseLeave={() => setShowControls(false)}
 					href={"/"}
-					height={"100%"}
+					height={"92%"}
 					display={"flex"}
 					alignItems={"center"}
 					bgcolor={"#cfcfcf4d"}

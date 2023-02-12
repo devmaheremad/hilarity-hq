@@ -24,7 +24,7 @@ const Home = ({ videos }: HomeProps) => {
 				<Stack
 					direction={"row"}
 					position={"relative"}
-					height={"65vh"}
+					minHeight={"100vh"}
 					spacing={{ xs: 4, sx: 0 }}
 				>
 					<Sidebar />
