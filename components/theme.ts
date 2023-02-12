@@ -1,13 +1,13 @@
-import { Open_Sans } from "@next/font/google";
+// import { Open_Sans } from "@next/font/google";
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 import { red, grey } from "@mui/material/colors";
 
-export const openSans = Open_Sans({
-	weight: ["400", "500", "600", "700"],
-	subsets: ["latin"],
-	display: "swap",
-	fallback: ["sans-serif"],
-});
+// export const openSans = Open_Sans({
+// 	weight: ["400", "500", "600", "700"],
+// 	subsets: ["latin"],
+// 	display: "swap",
+// 	fallback: ["sans-serif"],
+// });
 
 let theme = createTheme({
 	palette: {
@@ -21,9 +21,9 @@ let theme = createTheme({
 			main: red.A400,
 		},
 	},
-	typography: {
-		fontFamily: openSans.style.fontFamily,
-	},
+	// typography: {
+	// 	fontFamily: openSans.style.fontFamily,
+	// },
 });
 
 theme = responsiveFontSizes(theme);
