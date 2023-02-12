@@ -8,8 +8,12 @@ import PauseIcon from "@mui/icons-material/Pause";
 import VolumeOffIcon from "@mui/icons-material/VolumeOff";
 import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import Link from "../Link";
+import { useAppSelector } from "@/store/hook";
 
 const VideoCard = ({ post }: VideoCardProps) => {
+	const user = useAppSelector(
+		(state) => state.loginCheckerWithUserData.userProfile.authUser
+	);
 	const [showControls, setShowControls] = useState<boolean>(false);
 	const [playing, setPlaying] = useState<boolean>(false);
 	const [muted, setMuted] = useState<boolean>(false);
@@ -51,57 +55,68 @@ const VideoCard = ({ post }: VideoCardProps) => {
 			gap={2}
 			mb={12}
 		>
-			<Image
-				src={post?.postedBy.image}
-				alt={post?.caption}
-				width={55}
-				height={55}
-				placeholder={"blur"}
-				blurDataURL={"blur"}
-				className={"rounded-circle border-around"}
-			/>
+			<Link href={`/profile/${user?._id}`}>
+				<Image
+					src={post?.postedBy.image}
+					alt={post?.caption}
+					width={55}
+					height={55}
+					placeholder={"blur"}
+					blurDataURL={"blur"}
+					className={"rounded-circle border-around"}
+				/>
+			</Link>
 			<Box flexGrow={1}>
-				<Typography
-					variant="subtitle1"
-					color="#000"
-					fontWeight={600}
-					display={"flex"}
-					alignItems={"center"}
-					gap={"8px"}
-				>
-					{post?.postedBy.userName}
-					<VerifiedIcon fontSize="small" sx={{ color: "#1d9bf0" }} />
-				</Typography>
+				<Link href={`/profile/${user?._id}`}>
+					<Typography
+						variant="subtitle1"
+						color="#000"
+						fontWeight={600}
+						display={"flex"}
+						alignItems={"center"}
+						gap={"8px"}
+					>
+						{post?.postedBy.userName}
+						<VerifiedIcon fontSize="small" sx={{ color: "#1d9bf0" }} />
+					</Typography>
+				</Link>
 				<Typography variant="subtitle2" color="#958989" maxWidth={"80%"}>
 					{cutCaption(post?.caption)}
 				</Typography>
-				<Link
+				<Box
+					position={"relative"}
+					height={"92%"}
 					onMouseEnter={() => setShowControls(true)}
 					onMouseLeave={() => setShowControls(false)}
-					href={`/details/${post._id}`}
-					height={"92%"}
-					display={"flex"}
-					alignItems={"center"}
 					bgcolor={"#cfcfcf4d"}
-					mt={4}
 					borderRadius={3}
-					py={3}
-					position={"relative"}
+					py={5}
+					mt={4}
+					display={"flex"}
+					justifyContent={"center"}
 				>
-					<video
-						ref={videoRef}
-						loop
-						src={post?.video?.asset?.url}
-						width={"100%"}
-						height={"80%"}
-					></video>
+					<Link
+						href={`/details/${post._id}`}
+						display={"flex"}
+						justifyContent={"center"}
+						alignItems={"center"}
+						height={"100%"}
+						width={"90%"}
+					>
+						<video
+							ref={videoRef}
+							loop
+							src={post?.video?.asset?.url}
+							width={"100%"}
+							height={"100%"}
+						></video>
+					</Link>
 					{showControls && (
 						<Box
-							zIndex={2}
 							display={"flex"}
 							justifyContent={"space-between"}
 							position={"absolute"}
-							bottom={"6%"}
+							bottom={"2%"}
 							left={"50%"}
 							width={"92%"}
 							sx={{ transform: "translateX(-50%)" }}
@@ -132,7 +147,7 @@ const VideoCard = ({ post }: VideoCardProps) => {
 							)}
 						</Box>
 					)}
-				</Link>
+				</Box>
 			</Box>
 		</Stack>
 	);
