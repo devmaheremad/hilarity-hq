@@ -40,7 +40,7 @@ const VideoUploaderForm = () => {
 				caption,
 				video: {
 					_type: "file",
-					assets: {
+					asset: {
 						_type: "refrence",
 						_ref: videoAsset?._id,
 					},
