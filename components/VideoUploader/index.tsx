@@ -1,15 +1,19 @@
-import { Box, Stack } from "@mui/material";
+import { Box, IconButton, Stack } from "@mui/material";
 import HeadingWithSub from "../HeadingWithSub";
 import WaitingToUpload from "../WaitingToUpload";
-import { useAppSelector } from "@/store/hook";
+import { useAppDispatch, useAppSelector } from "@/store/hook";
 import { VideoInputFile, WrongTypeVideo } from "..";
-
+import DeleteIcon from "@mui/icons-material/Delete";
+import { setVideoAsset } from "@/store/features/uploader";
 const VideoUploader = () => {
 	const isLoading = useAppSelector((state) => state.uploader.isLoading);
 	const videoAsset = useAppSelector((state) => state.uploader.videoAsset);
 	const wrongType = useAppSelector((state) => state.uploader.wrongType);
+	const dispatch = useAppDispatch();
 
-	console.log(videoAsset);
+	const deleteTheVideoAsset = () => {
+		dispatch(setVideoAsset(null));
+	};
 
 	return (
 		<Box
@@ -51,7 +55,15 @@ const VideoUploader = () => {
 				{isLoading ? (
 					<WaitingToUpload />
 				) : videoAsset?.url ? (
-					<video src={videoAsset?.url} width={"95%"} loop controls></video>
+					<>
+						<IconButton
+							aria-label="delete this video"
+							onClick={deleteTheVideoAsset}
+						>
+							<DeleteIcon />
+						</IconButton>
+						<video src={videoAsset?.url} width={"95%"} loop controls></video>
+					</>
 				) : (
 					<VideoInputFile />
 				)}

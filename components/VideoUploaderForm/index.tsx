@@ -1,4 +1,5 @@
-import { useAppSelector } from "@/store/hook";
+import { setVideoAsset } from "@/store/features/uploader";
+import { useAppDispatch, useAppSelector } from "@/store/hook";
 import { popularTopics } from "@/utils/constants";
 import {
 	Button,
@@ -27,6 +28,8 @@ const VideoUploaderForm = () => {
 	const authUser = useAppSelector(
 		(state) => state.loginCheckerWithUserData.userProfile.authUser
 	);
+
+	const dispatch = useAppDispatch();
 
 	const handleCategoryChange = (event: SelectChangeEvent) => {
 		setCateogry(event.target.value);
@@ -60,6 +63,7 @@ const VideoUploaderForm = () => {
 					"Content-Type": "application/json",
 				},
 			});
+			dispatch(setVideoAsset(null));
 			router.push("/");
 		}
 	};
