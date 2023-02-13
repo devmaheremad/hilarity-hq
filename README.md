@@ -1,38 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# **Hilarity HQ Project**
 
-## Getting Started
+###### ![Hilarity HQ home page](https://i.ibb.co/KNWWCW8/hilarity-hq-vercel-app.png)
 
-First, run the development server:
+###### [Watch it here live](https://hilarity-hq.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### - Introduction about Hilarity HQ:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A platform for sharing videos, moments, and daily memos. With its user-friendly interface and sleek design, this platform makes sharing your memories with friends and family a breeze.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+#### - What I used technologies to build Hilarity HQ?
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+The important things I used to create Hilarity HQ are (ReactJS v18.2.0, TypeScript 4.9, Material UI v5.11.1, State Management ( ReduxToolkit ), react-oauth/google, jwt-decode, redux-persist, sanity, swr, and more...)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+#### - Setup and using it:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+To install Hilarity HQ to your computer it's easy you can clone it and just type `npm i` to your terminal
+Do what you need to add to it or update it or anything you need and update it again
+It's so welcomed to work with me to add new features to it
