@@ -1,6 +1,6 @@
 import { Headhtml, VideoUploader, VideoUploaderForm } from "@/components";
-import { Box, Stack } from "@mui/material";
-
+import { Box, Stack, Typography } from "@mui/material";
+import VideoSettingsIcon from "@mui/icons-material/VideoSettings";
 const Upload = () => {
 	return (
 		<>
@@ -26,6 +26,14 @@ const Upload = () => {
 					p={{ xs: 2, md: 5, lg: 7, xl: 8 }}
 					spacing={3}
 				>
+					<Typography
+						variant="h4"
+						component={"h1"}
+						color="#f51997"
+						textAlign={"center"}
+					>
+						<VideoSettingsIcon />
+					</Typography>
 					<VideoUploader />
 					<VideoUploaderForm />
 				</Stack>

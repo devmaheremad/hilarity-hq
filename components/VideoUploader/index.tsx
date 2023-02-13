@@ -9,11 +9,7 @@ const VideoUploader = () => {
 	const wrongType = useAppSelector((state) => state.uploader.wrongType);
 
 	return (
-		<Box
-			flexShrink={0}
-			width={{ xs: "226px", sm: "320px", md: "380px" }}
-			mx={"auto"}
-		>
+		<Box flexShrink={0} width={{ md: "380px" }} mx={"auto"}>
 			<HeadingWithSub
 				headingVariant={"h5"}
 				headingText={"Upload a video"}
