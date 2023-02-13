@@ -1,4 +1,4 @@
-import { Box, Stack } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import HeadingWithSub from "../HeadingWithSub";
 import WaitingToUpload from "../WaitingToUpload";
 import { useAppSelector } from "@/store/hook";
@@ -10,6 +10,16 @@ const VideoUploader = () => {
 
 	return (
 		<Box flexShrink={0} width={{ md: "380px" }} mx={"auto"}>
+			<Typography
+				variant="subtitle1"
+				component={"h1"}
+				color="#f51997"
+				mb={2}
+				display={"inline-block"}
+			>
+				Everyone has something valuable to contribute
+			</Typography>
+
 			<HeadingWithSub
 				headingVariant={"h5"}
 				headingText={"Upload a video"}
