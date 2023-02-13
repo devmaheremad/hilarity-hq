@@ -21,12 +21,10 @@ const WhenLogin = () => {
 
 	return (
 		<>
-			<Link href={"/upload"} display={"flex"} alignItems={"center"}>
-				<Button
-					variant="outlined"
-					startIcon={<AddIcon sx={{ mr: { xs: "0", sm: "8px" } }} />}
-				>
+			<Link href={"/upload"} className={"uploadBtn"}>
+				<Button variant="outlined" startIcon={<AddIcon />}>
 					<Typography
+						textTransform={"none"}
 						variant="body1"
 						sx={{ display: { xs: "none", sm: "block" } }}
 						component={"span"}

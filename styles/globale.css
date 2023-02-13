@@ -106,3 +106,6 @@ html,
 	border: 2px solid #8080808a;
 	padding: 2px;
 }
+.uploadBtn span {
+	margin: 0 !important;
+}
