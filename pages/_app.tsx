@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
 					content="Discover a world of videos with our all-in-one platform. Explore and enjoy videos from a wide range of categories - everything from music and entertainment to education and technology."
 				/>
 				<title>Hilarity HQ</title>
-				<link rel="icon" href="./favicon.ico" />
+				<link rel="icon" href="./favicon.ico" title="favicon" />
 			</Head>
 			<Provider store={store}>
 				<PersistGate persistor={persistor}>

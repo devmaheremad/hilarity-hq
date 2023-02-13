@@ -4,7 +4,7 @@ import HomeIcon from "@mui/icons-material/Home";
 
 const HomeBtn = () => {
 	return (
-		<Link href={"/"} width={"auto"}>
+		<Link href={"/"} width={"auto"} title="home page">
 			<Button
 				className="uploadBtn"
 				sx={{

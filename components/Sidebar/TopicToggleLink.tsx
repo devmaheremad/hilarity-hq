@@ -6,6 +6,7 @@ const TopicToggleLink = ({ name, icon }: TopicToggleLinkProps) => {
 	return (
 		<div>
 			<Link
+				title={`${name} cateogry`}
 				sx={{
 					display: "flex",
 					justifyContent: "center",

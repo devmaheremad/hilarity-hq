@@ -56,6 +56,7 @@ const VideoCard = ({ post }: VideoCardProps) => {
 			mb={12}
 		>
 			<Link
+				title="profile page"
 				href={`/profile/${user?._id}`}
 				display={"inline-block"}
 				width={55}
@@ -72,7 +73,11 @@ const VideoCard = ({ post }: VideoCardProps) => {
 				/>
 			</Link>
 			<Box flexGrow={1}>
-				<Link href={`/profile/${user?._id}`} display={"inline-block"}>
+				<Link
+					href={`/profile/${user?._id}`}
+					display={"inline-block"}
+					title="profile page"
+				>
 					<Typography
 						variant="subtitle1"
 						color="#000"
@@ -102,6 +107,7 @@ const VideoCard = ({ post }: VideoCardProps) => {
 				>
 					<Link
 						href={`/details/${post._id}`}
+						title="video Details page"
 						display={"flex"}
 						justifyContent={"center"}
 						alignItems={"center"}

@@ -9,6 +9,7 @@ const SideFooter = ({ list }: SideFooterProps) => {
 			{list.map((item) => {
 				return (
 					<Link
+						title="footer link"
 						className={styles.footerLink}
 						ml={"8px !important"}
 						key={item}

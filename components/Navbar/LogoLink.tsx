@@ -6,7 +6,7 @@ import Link from "../Link";
 const LogoLink = () => {
 	return (
 		<Grid item width={"140px"}>
-			<Link href={"/"} display={"flex"}>
+			<Link href={"/"} display={"flex"} title="LogoImg">
 				<Image
 					src={LogoImg}
 					alt={"Main logo"}

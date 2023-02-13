@@ -21,7 +21,7 @@ const WhenLogin = () => {
 
 	return (
 		<>
-			<Link href={"/upload"} className={"uploadBtn"}>
+			<Link href={"/upload"} className={"uploadBtn"} title="to upload page">
 				<Button variant="outlined" startIcon={<AddIcon />}>
 					<Typography
 						textTransform={"none"}
