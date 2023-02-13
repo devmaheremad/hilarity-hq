@@ -54,6 +54,7 @@ const VideoCard = ({ post }: VideoCardProps) => {
 			flexDirection={{ xs: "column", sm: "row" }}
 			gap={2}
 			mb={12}
+			maxHeight={"700px"}
 		>
 			<Link
 				title="profile page"
