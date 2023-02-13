@@ -4,10 +4,11 @@ import HomeIcon from "@mui/icons-material/Home";
 
 const HomeBtn = () => {
 	return (
-		<Link href={"/"}>
+		<Link href={"/"} width={"auto"}>
 			<Button
+				className="uploadBtn"
 				sx={{
-					width: "100px",
+					width: "auto",
 					border: "none",
 					"&:hover": { border: "0" },
 				}}
@@ -22,6 +23,7 @@ const HomeBtn = () => {
 					fontWeight={500}
 					textTransform={"capitalize"}
 					color={"#f51997"}
+					ml={1}
 				>
 					Home
 				</Typography>

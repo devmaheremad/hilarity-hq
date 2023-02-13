@@ -1,5 +1,5 @@
 export { default as Navbar } from "./Navbar";
-export { default as Sidebar } from "./Sidebar/Sidebar";
+export { default as Sidebar } from "./Sidebar";
 export { default as VideoCard } from "./VideoCard";
 export { default as NoResults } from "./NoResults";
 export { default as LogoLink } from "./Navbar/LogoLink";
@@ -16,3 +16,7 @@ export { default as WrongTypeVideo } from "./WrongTypeVideo";
 export { default as ShowVideoWithDeleteOption } from "./ShowVideoWithDeleteOption";
 export { default as Headhtml } from "./HeadHTML";
 export { default as NotAcceptedVideo } from "./NotAcceptedVideo";
+export { default as HomeBtn } from "./Sidebar/HomeBtn";
+export { default as PopularTopics } from "./Sidebar/PopularTopics";
+export { default as TopicToggleLink } from "./Sidebar/TopicToggleLink";
+export { default as SideFooter } from "./Sidebar/SideFooter";

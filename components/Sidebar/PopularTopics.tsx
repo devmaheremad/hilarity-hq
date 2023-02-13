@@ -6,7 +6,7 @@ import {
 } from "@mui/material";
 import { useRouter } from "next/router";
 import { popularTopics } from "../../utils/constants";
-import { TopicToggleLink } from "./index";
+import TopicToggleLink from "./TopicToggleLink";
 
 const PopularTopics = () => {
 	const router = useRouter();
