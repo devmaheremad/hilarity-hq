@@ -4,7 +4,7 @@ const NotAcceptedVideo = () => {
 	return (
 		<Typography
 			variant="body2"
-			color="#f51997"
+			color="primary.main"
 			maxWidth={"280px"}
 			textAlign={"center"}
 		>

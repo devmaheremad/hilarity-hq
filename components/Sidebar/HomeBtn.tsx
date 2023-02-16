@@ -22,7 +22,7 @@ const HomeBtn = () => {
 					variant="h6"
 					fontWeight={500}
 					textTransform={"capitalize"}
-					color={"#f51997"}
+					color={"primary.main"}
 					ml={1}
 				>
 					Home

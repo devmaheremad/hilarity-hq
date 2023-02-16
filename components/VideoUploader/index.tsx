@@ -13,7 +13,7 @@ const VideoUploader = () => {
 			<Typography
 				variant="subtitle1"
 				component={"h1"}
-				color="#f51997"
+				color="primary.main"
 				mb={2}
 				display={"inline-block"}
 			>

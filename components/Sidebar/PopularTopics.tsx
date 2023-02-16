@@ -43,7 +43,6 @@ const PopularTopics = () => {
 							sx={{
 								color: "black",
 								transition: "all 0.3s ease-in-out",
-								"&:hover": { color: "#f51997" },
 								border: "1px solid gray",
 								borderLeft: "1px solid gray !important",
 								borderRadius: "25px !important",

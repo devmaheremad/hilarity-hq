@@ -8,7 +8,7 @@ const WaitingToUpload = () => {
 			<Image src={LoaderVideo} alt={`${LoaderVideo}`} />
 			<Typography
 				variant="body2"
-				color="#f51997"
+				color="primary.main"
 				mt={2}
 				px={2}
 				textAlign={"center"}

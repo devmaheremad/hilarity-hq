@@ -11,7 +11,7 @@ const Feed = ({ videos }: FeedProps) => {
 					<Typography
 						variant="subtitle1"
 						component={"h1"}
-						color="#f51997"
+						color="primary.main"
 						mb={4}
 					>
 						We believe that everyone has something valuable to contribute, and

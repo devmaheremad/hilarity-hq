@@ -63,7 +63,7 @@ const WhenLogin = () => {
 					pushToHome();
 				}}
 			>
-				<LogoutIcon sx={{ color: "#f51997" }} />
+				<LogoutIcon sx={{ color: "primary.main" }} />
 			</IconButton>
 		</>
 	);
