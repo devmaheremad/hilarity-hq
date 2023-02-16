@@ -2,6 +2,7 @@ import { VideoTypes } from "@/@types/video.types";
 import { client } from "@/utils/client";
 import { allPostsQuery } from "@/utils/queries";
 import type { NextApiRequest, NextApiResponse } from "next";
+import { SanityDocumentStub } from "@sanity/client";
 
 const handler = async (
 	req: NextApiRequest,
@@ -12,7 +13,7 @@ const handler = async (
 		const data: VideoTypes[] = await client.fetch(query);
 		res.status(200).json(data);
 	} else if (req.method === "POST") {
-		const documentPost = req.body;
+		const documentPost: SanityDocumentStub<VideoTypes[]> = req.body;
 		client.create(documentPost).then(() => res.status(201).json(documentPost));
 	}
 };

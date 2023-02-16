@@ -109,3 +109,6 @@ html,
 .uploadBtn span {
 	margin: 0 !important;
 }
+.max-h-420px {
+	max-height: 420px;
+}

@@ -120,7 +120,7 @@ const VideoCard = ({ post }: VideoCardProps) => {
 							loop
 							src={post?.video?.asset?.url}
 							width={"100%"}
-							height={"100%"}
+							className={"max-h-420px"}
 						></video>
 					</Link>
 					{showControls && (
