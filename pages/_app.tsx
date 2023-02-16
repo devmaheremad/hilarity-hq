@@ -9,6 +9,7 @@ import Head from "next/head";
 import { Provider } from "react-redux";
 import store, { persistor } from "@/store/store";
 import { PersistGate } from "redux-persist/integration/react";
+import { BASE_URL } from "@/utils";
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
@@ -20,7 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
 					content="Discover a world of videos with our all-in-one platform. Explore and enjoy videos from a wide range of categories - everything from music and entertainment to education and technology."
 				/>
 				<title>Hilarity HQ</title>
-				<link rel="icon" href="./favicon.ico" title="favicon" />
+				<link rel="icon" href={`${BASE_URL}/favicon.ico`} title="favicon" />
 			</Head>
 			<Provider store={store}>
 				<PersistGate persistor={persistor}>

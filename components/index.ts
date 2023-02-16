@@ -20,3 +20,5 @@ export { default as HomeBtn } from "./Sidebar/HomeBtn";
 export { default as PopularTopics } from "./Sidebar/PopularTopics";
 export { default as TopicToggleLink } from "./Sidebar/TopicToggleLink";
 export { default as SideFooter } from "./Sidebar/SideFooter";
+export { default as PostDetailsVideo } from "./PostDetailsVideo";
+export { default as PostDetailsInfo } from "./PostDetailsInfo";
