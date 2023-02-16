@@ -5,13 +5,15 @@ import { Grid } from "@mui/material";
 import { GetServerSideProps } from "next";
 import { PostDetailsInfo, PostDetailsVideo } from "@/components";
 const VideoDetails = ({ postDetails }: VideoDetailsProps) => {
+	if (!postDetails) return null;
+
 	return (
 		<Grid
 			container
 			px={{ xs: 1, sm: 2, md: 3, lg: 4, xl: 5 }}
-			mx={"0 auto"}
+			mx={"0 !important"}
 			maxWidth={"1300px"}
-			className={"paddingContent min-h-100vh"}
+			className={"paddingContent min-h-100vh videoDetailsBg"}
 		>
 			<PostDetailsVideo postDetails={postDetails} />
 			<PostDetailsInfo postDetails={postDetails} />

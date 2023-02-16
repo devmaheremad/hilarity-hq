@@ -5,7 +5,7 @@ type IProps = {
 };
 const PostDetailsInfo = ({ postDetails }: IProps) => {
 	return (
-		<Grid item xs={12} md={8}>
+		<Grid item xs={12} md={4}>
 			<h1>test</h1>
 		</Grid>
 	);
