@@ -96,7 +96,7 @@ const VideoCard = ({ post }: VideoCardProps) => {
 				</Typography>
 				<Box
 					position={"relative"}
-					height={"92%"}
+					maxHeight={"550px"}
 					onMouseEnter={() => setShowControls(true)}
 					onMouseLeave={() => setShowControls(false)}
 					bgcolor={"#cfcfcf4d"}
