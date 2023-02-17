@@ -1,7 +1,6 @@
 import { VideoCardProps } from "@/@types/videoCard.types";
-import { Box, IconButton, Stack, Typography } from "@mui/material";
+import { Box, IconButton, Stack } from "@mui/material";
 import Image from "next/image";
-import VerifiedIcon from "@mui/icons-material/Verified";
 import { useRef, useState } from "react";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
@@ -9,6 +8,7 @@ import VolumeOffIcon from "@mui/icons-material/VolumeOff";
 import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import Link from "../Link";
 import { useAppSelector } from "@/store/hook";
+import { UserNameWithCaptionAndImg } from "../";
 
 const VideoCard = ({ post }: VideoCardProps) => {
 	const user = useAppSelector(
@@ -74,26 +74,13 @@ const VideoCard = ({ post }: VideoCardProps) => {
 				/>
 			</Link>
 			<Box flexGrow={1}>
-				<Link
-					href={`/profile/${user?._id}`}
-					display={"inline-block"}
-					title="profile page"
-				>
-					<Typography
-						variant="subtitle1"
-						color="#000"
-						fontWeight={600}
-						display={"flex"}
-						alignItems={"center"}
-						gap={"8px"}
-					>
-						{post?.postedBy.userName}
-						<VerifiedIcon fontSize="small" sx={{ color: "#1d9bf0" }} />
-					</Typography>
-				</Link>
-				<Typography variant="subtitle2" color="#958989" maxWidth={"80%"}>
-					{cutCaption(post?.caption)}
-				</Typography>
+				{user?._id && (
+					<UserNameWithCaptionAndImg
+						userId={user?._id}
+						userName={post?.postedBy.userName}
+						caption={post?.caption}
+					/>
+				)}
 				<Box
 					position={"relative"}
 					maxHeight={"550px"}
