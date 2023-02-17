@@ -16,9 +16,7 @@ const Home = ({ videos }: HomeProps) => {
 			/>
 			<Box
 				px={{ xs: 1, sm: 2, md: 3, lg: 4, xl: 5 }}
-				mx={"0 auto"}
-				maxWidth={"1300px"}
-				className={"paddingContent min-h-100vh"}
+				className={"paddingContent min-h-100vh max-w-1300px mx-auto"}
 			>
 				<Stack
 					direction={"row"}

@@ -135,11 +135,11 @@ const VideoCard = ({ post }: VideoCardProps) => {
 						>
 							{playing ? (
 								<IconButton onClick={playVideoHandler} aria-label="Pause video">
-									<PauseIcon color="secondary" />
+									<PauseIcon sx={{ color: "#f51997", fontSize: 50 }} />
 								</IconButton>
 							) : (
 								<IconButton onClick={playVideoHandler} aria-label="Play video">
-									<PlayArrowIcon color="secondary" />
+									<PlayArrowIcon sx={{ color: "#f51997", fontSize: 50 }} />
 								</IconButton>
 							)}
 							{muted ? (
@@ -147,14 +147,14 @@ const VideoCard = ({ post }: VideoCardProps) => {
 									onClick={mutedVideoHandler}
 									aria-label="VolumeUp video"
 								>
-									<VolumeOffIcon color="secondary" />
+									<VolumeOffIcon sx={{ color: "#f51997", fontSize: 50 }} />
 								</IconButton>
 							) : (
 								<IconButton
 									onClick={mutedVideoHandler}
 									aria-label="VolumeOff video"
 								>
-									<VolumeUpIcon color="secondary" />
+									<VolumeUpIcon sx={{ color: "#f51997", fontSize: 50 }} />
 								</IconButton>
 							)}
 						</Box>

@@ -32,7 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
 							{/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
 							<CssBaseline />
 							<Navbar />
-							<main className={"min-h-100vh max-w-1300px mx-auto"}>
+							<main className={"min-h-100vh"}>
 								<Component {...pageProps} />
 							</main>
 						</ThemeProvider>
