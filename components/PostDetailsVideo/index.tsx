@@ -46,7 +46,7 @@ const PostDetailsVideo = ({ postDetails }: IProps) => {
 				src={postDetails.video.asset.url}
 				loop
 				width={"100%"}
-				className={"cursor-pointer"}
+				className={"cursor-pointer rounded-15px"}
 			></video>
 			{playBtn && (
 				<IconButton

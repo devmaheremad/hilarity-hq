@@ -102,6 +102,9 @@ html,
 .rounded-circle {
 	border-radius: 30px;
 }
+.rounded-15px {
+	border-radius: 15px;
+}
 .border-around {
 	border: 2px solid #8080808a;
 	padding: 2px;
