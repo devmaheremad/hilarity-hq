@@ -41,12 +41,6 @@ const VideoCard = ({ post }: VideoCardProps) => {
 		}
 	};
 
-	const cutCaption = (captionStr: string): string => {
-		return captionStr.length >= 250
-			? `${captionStr.substring(0, 250)}...`
-			: captionStr;
-	};
-
 	return (
 		<Stack
 			width={"100%"}
