@@ -1,9 +1,12 @@
 import { VideoTypes } from "@/@types/video.types";
-import { Grid, IconButton } from "@mui/material/";
+import { Box, Grid, IconButton } from "@mui/material/";
 import HomeIcon from "@mui/icons-material/Home";
 import { useRouter } from "next/router";
 import { useRef } from "react";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
+import VolumeOffIcon from "@mui/icons-material/VolumeOff";
+import VolumeUpIcon from "@mui/icons-material/VolumeUp";
+
 type IProps = {
 	postDetails: VideoTypes;
 };
@@ -11,6 +14,7 @@ import { useState } from "react";
 
 const PostDetailsVideo = ({ postDetails }: IProps) => {
 	const [playBtn, setPlayBtn] = useState<boolean>(true);
+	const [muted, setMuted] = useState<boolean>(false);
 	const router = useRouter();
 	const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -23,6 +27,18 @@ const PostDetailsVideo = ({ postDetails }: IProps) => {
 		}
 	};
 
+	const mutedVideoHandler = (): void => {
+		const video = videoRef.current;
+		if (video !== null) {
+			if (muted) {
+				video.muted = false;
+				setMuted((prev) => !prev);
+			} else {
+				video.muted = true;
+				setMuted((prev) => !prev);
+			}
+		}
+	};
 	return (
 		<Grid
 			item
@@ -62,6 +78,17 @@ const PostDetailsVideo = ({ postDetails }: IProps) => {
 					<PlayCircleIcon sx={{ fontSize: 65, color: "white" }} />
 				</IconButton>
 			)}
+			<Box position={"absolute"} bottom={"22%"} right={"1%"}>
+				{muted ? (
+					<IconButton onClick={mutedVideoHandler} aria-label="VolumeUp video">
+						<VolumeOffIcon sx={{ color: "white", fontSize: 50 }} />
+					</IconButton>
+				) : (
+					<IconButton onClick={mutedVideoHandler} aria-label="VolumeOff video">
+						<VolumeUpIcon sx={{ color: "white", fontSize: 50 }} />
+					</IconButton>
+				)}
+			</Box>
 		</Grid>
 	);
 };
