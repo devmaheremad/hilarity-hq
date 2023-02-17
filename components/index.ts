@@ -23,3 +23,4 @@ export { default as SideFooter } from "./Sidebar/SideFooter";
 export { default as PostDetailsVideo } from "./PostDetailsVideo";
 export { default as PostDetailsInfo } from "./PostDetailsInfo";
 export { default as UserNameWithCaptionAndImg } from "./UserNameWithCaptionAndImg";
+export { default as ProfileLinkImg } from "./ProfileLinkImg";

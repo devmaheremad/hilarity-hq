@@ -1,6 +1,5 @@
 import { VideoCardProps } from "@/@types/videoCard.types";
 import { Box, IconButton, Stack } from "@mui/material";
-import Image from "next/image";
 import { useRef, useState } from "react";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
@@ -8,12 +7,13 @@ import VolumeOffIcon from "@mui/icons-material/VolumeOff";
 import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import Link from "../Link";
 import { useAppSelector } from "@/store/hook";
-import { UserNameWithCaptionAndImg } from "../";
+import { ProfileLinkImg, UserNameWithCaptionAndImg } from "../";
 
 const VideoCard = ({ post }: VideoCardProps) => {
 	const user = useAppSelector(
 		(state) => state.loginCheckerWithUserData.userProfile.authUser
 	);
+
 	const [showControls, setShowControls] = useState<boolean>(false);
 	const [playing, setPlaying] = useState<boolean>(false);
 	const [muted, setMuted] = useState<boolean>(false);
@@ -50,31 +50,17 @@ const VideoCard = ({ post }: VideoCardProps) => {
 			mb={12}
 			maxHeight={"700px"}
 		>
-			<Link
-				title="profile page"
-				href={`/profile/${user?._id}`}
-				display={"inline-block"}
-				width={55}
-				height={55}
-			>
-				<Image
-					src={post?.postedBy.image}
-					alt={post?.caption}
-					width={55}
-					height={55}
-					placeholder={"blur"}
-					blurDataURL={"blur"}
-					className={"rounded-circle border-around"}
-				/>
-			</Link>
+			<ProfileLinkImg
+				userName={post.postedBy.userName}
+				image={post.postedBy.image}
+				userId={post?._id}
+			/>
 			<Box flexGrow={1}>
-				{user?._id && (
-					<UserNameWithCaptionAndImg
-						userId={user?._id}
-						userName={post?.postedBy.userName}
-						caption={post?.caption}
-					/>
-				)}
+				<UserNameWithCaptionAndImg
+					userId={post?._id}
+					userName={post?.postedBy.userName}
+					caption={post?.caption}
+				/>
 				<Box
 					position={"relative"}
 					maxHeight={"550px"}
