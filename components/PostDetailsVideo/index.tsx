@@ -48,11 +48,12 @@ const PostDetailsVideo = ({ postDetails }: IProps) => {
 			display={"flex"}
 			justifyContent={"center"}
 			alignItems={"center"}
+			className={"videoDetailsBg"}
 		>
 			<IconButton
 				onClick={() => router.push("/")}
 				aria-label="go home"
-				sx={{ position: "absolute", left: "0", top: "-5px", p: 0 }}
+				sx={{ position: "absolute", left: "5%", top: "-5px", p: 0 }}
 			>
 				<HomeIcon sx={{ color: "primary.main" }} />
 			</IconButton>
