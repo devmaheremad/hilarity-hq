@@ -34,6 +34,15 @@ html,
 .m-h-80px {
 	min-height: 80px;
 }
+.h-100vh {
+	height: 100vh;
+}
+.max-h-100vh {
+	max-height: 100vh;
+}
+.max-h-700px {
+	max-height: 700px;
+}
 .justify-content-center {
 	justify-content: center;
 }

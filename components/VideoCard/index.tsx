@@ -6,14 +6,9 @@ import PauseIcon from "@mui/icons-material/Pause";
 import VolumeOffIcon from "@mui/icons-material/VolumeOff";
 import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import Link from "../Link";
-import { useAppSelector } from "@/store/hook";
 import { ProfileLinkImg, UserNameWithCaptionAndImg } from "../";
 
 const VideoCard = ({ post }: VideoCardProps) => {
-	const user = useAppSelector(
-		(state) => state.loginCheckerWithUserData.userProfile.authUser
-	);
-
 	const [showControls, setShowControls] = useState<boolean>(false);
 	const [playing, setPlaying] = useState<boolean>(false);
 	const [muted, setMuted] = useState<boolean>(false);

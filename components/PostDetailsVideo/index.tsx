@@ -41,6 +41,7 @@ const PostDetailsVideo = ({ postDetails }: IProps) => {
 	};
 	return (
 		<Grid
+			pt={"50px"}
 			item
 			xs={12}
 			md={8}
@@ -53,7 +54,7 @@ const PostDetailsVideo = ({ postDetails }: IProps) => {
 			<IconButton
 				onClick={() => router.push("/")}
 				aria-label="go home"
-				sx={{ position: "absolute", left: "5%", top: "-5px", p: 0 }}
+				sx={{ position: "absolute", left: "5%", top: "20px", p: 0 }}
 			>
 				<HomeIcon sx={{ color: "primary.main" }} />
 			</IconButton>
@@ -63,7 +64,7 @@ const PostDetailsVideo = ({ postDetails }: IProps) => {
 				src={postDetails.video.asset.url}
 				loop
 				width={"100%"}
-				className={"cursor-pointer"}
+				className={"cursor-pointer max-h-700px"}
 			></video>
 			{playBtn && (
 				<IconButton
@@ -79,7 +80,7 @@ const PostDetailsVideo = ({ postDetails }: IProps) => {
 					<PlayCircleIcon sx={{ fontSize: 65, color: "white" }} />
 				</IconButton>
 			)}
-			<Box position={"absolute"} bottom={"22%"} right={"1%"}>
+			<Box position={"absolute"} bottom={"1%"} right={"1%"}>
 				{muted ? (
 					<IconButton onClick={mutedVideoHandler} aria-label="VolumeUp video">
 						<VolumeOffIcon sx={{ color: "white", fontSize: 50 }} />

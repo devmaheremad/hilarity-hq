@@ -8,7 +8,7 @@ const VideoDetails = ({ postDetails }: VideoDetailsProps) => {
 	if (!postDetails) return null;
 
 	return (
-		<Grid container className={"paddingContent min-h-100vh"}>
+		<Grid container className={"min-h-100vh"} pt={{ xs: "223px", md: "94px" }}>
 			<PostDetailsVideo postDetails={postDetails} />
 			<PostDetailsInfo postDetails={postDetails} />
 		</Grid>

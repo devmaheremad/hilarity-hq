@@ -9,8 +9,8 @@ const UserNameWithCaptionAndImg = ({
 	caption,
 }: UserNameWithCaptionAndImgProps) => {
 	const cutCaption = (captionStr: string): string => {
-		return captionStr.length >= 250
-			? `${captionStr.substring(0, 250)}...`
+		return captionStr.length >= 50
+			? `${captionStr.substring(0, 50)}...`
 			: captionStr;
 	};
 	return (
@@ -32,7 +32,7 @@ const UserNameWithCaptionAndImg = ({
 					<VerifiedIcon fontSize="small" sx={{ color: "#1d9bf0" }} />
 				</Typography>
 			</Link>
-			<Typography variant="subtitle2" color="#958989" maxWidth={"80%"}>
+			<Typography variant="subtitle2" color="#958989" maxWidth={"95%"}>
 				{cutCaption(caption)}
 			</Typography>
 		</>
