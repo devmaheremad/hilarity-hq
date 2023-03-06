@@ -1,7 +1,8 @@
 import { VideoTypes } from "@/@types/video.types";
-import { Box, Grid, Stack } from "@mui/material/";
+import { cutCaption } from "@/utils/functions";
+import { Grid, Stack, Typography } from "@mui/material/";
 import ProfileLinkImg from "../ProfileLinkImg";
-import UserNameWithCaptionAndImg from "../UserNameWithCaptionAndImg";
+import UserNameWithCaptionAndImg from "../UserNameWithImg";
 type IProps = {
 	postDetails: VideoTypes;
 };
@@ -20,14 +21,14 @@ const PostDetailsInfo = ({ postDetails }: IProps) => {
 					image={postDetails.postedBy.image}
 					userId={postDetails?._id}
 				/>
-				<Box>
-					<UserNameWithCaptionAndImg
-						userId={postDetails?._id}
-						userName={postDetails?.postedBy.userName}
-						caption={postDetails?.caption}
-					/>
-				</Box>
+				<UserNameWithCaptionAndImg
+					userId={postDetails?._id}
+					userName={postDetails?.postedBy.userName}
+				/>
 			</Stack>
+			<Typography variant="subtitle2" color="#645757" mt={2} maxWidth={"95%"}>
+				{cutCaption(postDetails?.caption)}
+			</Typography>
 		</Grid>
 	);
 };
