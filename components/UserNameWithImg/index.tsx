@@ -1,7 +1,7 @@
-import { UserNameWithImgProps } from "@/@types/userNameWithImgProps.types";
 import { Typography } from "@mui/material";
 import Link from "../Link";
 import VerifiedIcon from "@mui/icons-material/Verified";
+import { UserNameWithImgProps } from "@/@types/userNameWithImgProps.types";
 
 const UserNameWithImg = ({ userName, userId }: UserNameWithImgProps) => {
 	return (
