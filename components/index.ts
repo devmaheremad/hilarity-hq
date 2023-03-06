@@ -24,3 +24,4 @@ export { default as PostDetailsVideo } from "./PostDetailsVideo";
 export { default as PostDetailsInfo } from "./PostDetailsInfo";
 export { default as UserNameWithImg } from "./UserNameWithImg";
 export { default as ProfileLinkImg } from "./ProfileLinkImg";
+export { default as TypoCaption } from "./TypoCaption";

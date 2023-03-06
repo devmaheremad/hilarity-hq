@@ -6,8 +6,7 @@ import PauseIcon from "@mui/icons-material/Pause";
 import VolumeOffIcon from "@mui/icons-material/VolumeOff";
 import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import Link from "../Link";
-import { ProfileLinkImg, UserNameWithImg } from "../";
-import { cutCaption } from "@/utils/functions";
+import { ProfileLinkImg, TypoCaption, UserNameWithImg } from "../";
 
 const VideoCard = ({ post }: VideoCardProps) => {
 	const [showControls, setShowControls] = useState<boolean>(false);
@@ -56,9 +55,7 @@ const VideoCard = ({ post }: VideoCardProps) => {
 					userId={post?._id}
 					userName={post?.postedBy.userName}
 				/>
-				<Typography variant="subtitle2" color="#645757" maxWidth={"95%"}>
-					{cutCaption(post?.caption)}
-				</Typography>
+				<TypoCaption caption={post?.caption} />
 				<Box
 					position={"relative"}
 					maxHeight={"550px"}
