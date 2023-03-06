@@ -1,12 +1,13 @@
 import { VideoCardProps } from "@/@types/videoCard.types";
-import { Box, IconButton, Stack } from "@mui/material";
+import { Box, IconButton, Stack, Typography } from "@mui/material";
 import { useRef, useState } from "react";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
 import VolumeOffIcon from "@mui/icons-material/VolumeOff";
 import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import Link from "../Link";
-import { ProfileLinkImg, UserNameWithCaptionAndImg } from "../";
+import { ProfileLinkImg, UserNameWithImg } from "../";
+import { cutCaption } from "@/utils/functions";
 
 const VideoCard = ({ post }: VideoCardProps) => {
 	const [showControls, setShowControls] = useState<boolean>(false);
@@ -51,11 +52,13 @@ const VideoCard = ({ post }: VideoCardProps) => {
 				userId={post?._id}
 			/>
 			<Box flexGrow={1}>
-				<UserNameWithCaptionAndImg
+				<UserNameWithImg
 					userId={post?._id}
 					userName={post?.postedBy.userName}
-					caption={post?.caption}
 				/>
+				<Typography variant="subtitle2" color="#645757" maxWidth={"95%"}>
+					{cutCaption(post?.caption)}
+				</Typography>
 				<Box
 					position={"relative"}
 					maxHeight={"550px"}

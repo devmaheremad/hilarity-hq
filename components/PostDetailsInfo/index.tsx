@@ -2,7 +2,7 @@ import { VideoTypes } from "@/@types/video.types";
 import { cutCaption } from "@/utils/functions";
 import { Grid, Stack, Typography } from "@mui/material/";
 import ProfileLinkImg from "../ProfileLinkImg";
-import UserNameWithCaptionAndImg from "../UserNameWithImg";
+import UserNameWithImg from "../UserNameWithImg";
 type IProps = {
 	postDetails: VideoTypes;
 };
@@ -21,7 +21,7 @@ const PostDetailsInfo = ({ postDetails }: IProps) => {
 					image={postDetails.postedBy.image}
 					userId={postDetails?._id}
 				/>
-				<UserNameWithCaptionAndImg
+				<UserNameWithImg
 					userId={postDetails?._id}
 					userName={postDetails?.postedBy.userName}
 				/>
