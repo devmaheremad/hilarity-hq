@@ -1,5 +1,6 @@
 import { VideoTypes } from "@/@types/video.types";
 import { Box, Grid, Stack } from "@mui/material/";
+import { Likes, Comments } from "../";
 import ProfileLinkImg from "../ProfileLinkImg";
 import TypoCaption from "../TypoCaption";
 import UserNameWithImg from "../UserNameWithImg";
@@ -14,6 +15,7 @@ const PostDetailsInfo = ({ postDetails }: IProps) => {
 			md={4}
 			px={{ xs: 2, sm: 3, md: 5, lg: 6, xl: 7 }}
 			pt={"50px"}
+			bgcolor={"white"}
 		>
 			<Stack direction={"row"} spacing={2}>
 				<ProfileLinkImg
@@ -29,6 +31,8 @@ const PostDetailsInfo = ({ postDetails }: IProps) => {
 			<Box mt={2}>
 				<TypoCaption caption={postDetails?.caption} />
 			</Box>
+			<Likes />
+			<Comments />
 		</Grid>
 	);
 };
