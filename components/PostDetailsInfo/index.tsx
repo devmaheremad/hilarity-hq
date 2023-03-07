@@ -1,6 +1,6 @@
 import { VideoTypes } from "@/@types/video.types";
 import { Box, Grid, Stack } from "@mui/material/";
-import { Likes, Comments } from "../";
+import { Likes, Comments, AddComments } from "../";
 import ProfileLinkImg from "../ProfileLinkImg";
 import TypoCaption from "../TypoCaption";
 import UserNameWithImg from "../UserNameWithImg";
@@ -33,6 +33,7 @@ const PostDetailsInfo = ({ postDetails }: IProps) => {
 			</Box>
 			<Likes />
 			<Comments />
+			<AddComments />
 		</Grid>
 	);
 };

@@ -27,3 +27,4 @@ export { default as ProfileLinkImg } from "./ProfileLinkImg";
 export { default as TypoCaption } from "./TypoCaption";
 export { default as Likes } from "./Likes";
 export { default as Comments } from "./Comments";
+export { default as AddComments } from "./AddComments";

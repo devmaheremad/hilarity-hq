@@ -1,9 +1,5 @@
 const Comments = () => {
-	return (
-		<div>
-			<h1>Comments</h1>
-		</div>
-	);
+	return <h4>Comments will shown here</h4>;
 };
 
 export default Comments;
